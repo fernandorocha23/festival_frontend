@@ -1,5 +1,5 @@
 import api from "../services/api.jsx";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {useUserContext} from "../services/UserContext.jsx";
 import {toast} from "react-toastify";
 
