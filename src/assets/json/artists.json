@@ -1,0 +1,34 @@
+{
+  "artists": [
+    {
+      "id": 0,
+	  "name": "Maria Leal",
+      "performance_date": "14 de Agosto",
+      "performance_hour": "21:30",
+      "image_path": "festival/MariaLeal.jpeg",
+      "video_url": "https://open.spotify.com/intl-pt/artist/6y0Dtoijz4FORs3Nft0ohl",
+      "short_bio": "Fenómeno da música popular portuguesa, Maria Leal conquistou o país com os seus ‘hits’ virais e espetáculos únicos. A sua presença carismática e letras polémicas garantem uma experiência inesquecível.",
+	  "music_style": " Música Popular Portuguesa"
+    },
+    {
+	  "id": 1,
+	  "name": "Quim Barreiros",
+      "performance_date": "15 de Agosto",
+      "performance_hour": "19:00",
+      "image_path": "festival/Quim_Barreiros.jpeg",
+      "video_url": "https://open.spotify.com/intl-pt/artist/2oWYReGFzdcjvgUC5aizxv",
+      "short_bio": "Uma das maiores figuras da música popular portuguesa, Quim Barreiros é conhecido pelo seu bom humor e letras com duplo-sentido. Com mais de 40 anos de carreira, promete conquistar o público com os seus maiores sucessos.",
+	  "music_style": "Música Popular Portuguesa"
+    },
+    {
+	  "id": 2,
+      "name": "Rosinha",
+      "performance_date": "16 de Agosto",
+      "performance_hour": "20:00",
+      "image_path": "festival/Rosinha.jpeg",
+      "video_url": "https://open.spotify.com/intl-pt/artist/7jEoa4wHZBYkvD6WEkLhXs",
+      "short_bio": "Cantora e compositora portuguesa, Rosinha apresenta-se pela primeira vez neste festival. Com seu estilo único e acordeão contagiante, promete um espetáculo inesquecível para todos os seus fãs.",
+	  "music_style": "Música Popular Portuguesa"
+    }
+  ]
+}

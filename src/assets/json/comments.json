@@ -1,0 +1,53 @@
+{
+  "comments": [
+    {
+      "id": 0,
+      "artist_id": 0,
+      "user_id": 0,
+      "comment_text": "Muito fixe! Divertida e com uma energia contagiante!!",
+      "pub_datetime": "2025-05-08 14:35:25"
+    },
+    {
+      "id": 1,
+      "artist_id": 1,
+      "user_id": 0,
+      "comment_text": "Superou as minhas expectativas!! Ansioso para mais concertos!! ",
+      "pub_datetime": "2025-05-09 18:05:12"
+    },
+    {
+      "id": 2,
+      "artist_id": 0,
+      "user_id": 1,
+      "comment_text": "A minha cantora favorita, bora Maria Leal, sou fã número um!!",
+      "pub_datetime": "2025-05-09 21:42:31"
+    },
+    {
+      "id": 3,
+      "artist_id": 1,
+      "user_id": 2,
+      "comment_text": "Já vi uma atuação no ano passado - foi fenomenal",
+      "pub_datetime": "2025-05-10 10:01:01"
+    },
+    {
+      "id": 4,
+      "artist_id": 2,
+      "user_id": 1,
+      "comment_text": "ICÓNICA!! Sempre pronta para mais concertos incríveis na fila da frente",
+      "pub_datetime": "2025-05-11 09:17:23"
+    },
+    {
+      "id": 5,
+      "artist_id": 1,
+      "user_id": 1,
+      "comment_text": "Que chinfrim!",
+      "pub_datetime": "2025-05-12 12:05:47"
+    },
+    {
+      "id": 6,
+      "artist_id": 2,
+      "user_id": 0,
+      "comment_text": "Sempre a abrir!",
+      "pub_datetime": "2025-05-12 17:41:57"
+    }
+  ]
+}

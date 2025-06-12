@@ -1,0 +1,16 @@
+{
+  "news": [
+    {
+      "id": 0,
+      "image_path": "/festival/noticia1.jpg",
+      "headline": "Concerto Cancelado",
+      "news_text": "A apresentação do cantor brasileiro Mc Livinho, prevista para o dia 15 de agosto, foi cancelada devido a um acidente com o cantor no ensaio geral. A organização do festival irá brevemente anunciar uma substituição de última hora."
+    },
+    {
+      "id": 1,
+      "image_path": "/festival/noticia2.jpg",
+      "headline": "Presença VIP Confirmada",
+      "news_text": "O jogador de futebol, Cristiano Ronaldo, confirmou a sua presença na área VIP do festival.  Fãs poderão tirar fotos e receber autógrafos do jogador durante os intervalos dos concertos."
+    }
+  ]
+}
