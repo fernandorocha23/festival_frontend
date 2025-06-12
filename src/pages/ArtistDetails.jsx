@@ -77,7 +77,7 @@ function ArtistDetails() {
                                     <CommentArtist
                                         key={index}
                                         id={c.id}
-                                        user_id={c.userName}
+                                        username={c.userName}
                                         comment_text={c.commentText}
                                         pub_datetime={c.dateTime}
                                         likes={c.likesCount}
