@@ -17,11 +17,11 @@ function ArtistDetails() {
     const dados = location.state.data;
 
     useEffect(() => {
-        async function fetchArtists() {
+        async function fetchComments() {
             let comentarios = await api.get(`/artists/${dados.id}/comments`);
             setComments(comentarios.data);
         }
-        fetchArtists();
+        fetchComments();
     }, [dados.id]);
 
     const handleInput = (e) => {

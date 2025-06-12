@@ -1,39 +1,38 @@
 import api from "../services/api.jsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useUserContext} from "../services/UserContext.jsx";
 import {toast} from "react-toastify";
 
-function CommentArtist(detalhes){
+function CommentArtist(detalhes) {
     const contexto = useUserContext();
     const [likes, setLikes] = useState(detalhes.likes);
-
-    const usernames = detalhes.usersLiked.map(u => u.username);
-
-    const [liked, setLiked] = useState(contexto.user && likes === 0 ? usernames.includes(contexto.user.username) : false);
-
-
+    const [liked, setLiked] = useState(false);
 
     const handleLike = async () => {
+        if (!contexto.user) {
+            toast("É necessário iniciar sessão para dar like.");
+            return;
+        }
         try {
-            if (!liked){
+            if (!liked) {
                 const response = await api.post(`/comments/${detalhes.id}/like`);
                 setLikes(response.data.likesCount);
                 setLiked(true);
-            }
-            else {
+            } else {
                 const response = await api.post(`/comments/${detalhes.id}/dislike`);
                 setLikes(response.data.likesCount);
                 setLiked(false);
             }
 
         } catch (e) {
-            toast("É necessário iniciar sessão para dar like.");
+            toast("Ocorreu um erro ao processar o seu like.");
+            console.error("Erro ao dar like:", e);
         }
     };
 
-    return(
+    return (
         <div className="comentarios">
-            <h3>Comentário de user {detalhes.user_id}</h3>
+            <h3>Comentário de user {detalhes.username}</h3>
             <p>{detalhes.comment_text}</p>
             <div className="comment-footer">
                 <small><em>{new Date(detalhes.pub_datetime).toLocaleString()}</em></small>
@@ -45,4 +44,5 @@ function CommentArtist(detalhes){
         </div>
     )
 }
+
 export default CommentArtist;
