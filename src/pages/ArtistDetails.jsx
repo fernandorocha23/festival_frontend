@@ -86,20 +86,36 @@ function ArtistDetails() {
                                 );
                             })}
                         </div>
-                        {contexto.user ?
-                            <section className="comentarios">
-                                <h3>Deixe aqui o seu Comentário</h3>
-                                <div className="form-grupo">
-                                    <label htmlFor="comentarios">Comentário sobre o artista:</label>
-                                    <textarea name="comentarios" id="comentarios"
-                                              placeholder="Compartilhe suas expectativas, sugestões ou dúvidas sobre o festival..." onChange={handleInput}></textarea>
-                                </div>
-                                <input type={"submit"}/>
-                            </section> :
-                            <Link to="/login" className="travel-link">Efetue o login para adicionar um comentário</Link>
-                        }
                     </section>
                 </form>
+
+                {contexto.user ? (
+                    <form onSubmit={handleSubmit}>
+                        <section className="comentarios">
+                            <h3>Deixe aqui o seu Comentário</h3>
+                            <div className="form-grupo">
+                                <label htmlFor="comentarios">Comentário sobre o artista:</label>
+                                <textarea
+                                    name="comentarios"
+                                    id="comentarios"
+                                    value={newComment}
+                                    placeholder="Compartilhe suas expectativas, sugestões ou dúvidas sobre o festival..."
+                                    onChange={handleInput}
+                                ></textarea>
+                            </div>
+                            <input type={"submit"} value="Comentar"/>
+                        </section>
+                    </form>
+                ) : (
+                    <section className="comentarios">
+                        <h3>Deixe aqui o seu Comentário</h3>
+                        <p>
+                            <Link to="/login" className="travel-link">
+                                Efetue o login para adicionar um comentário
+                            </Link>
+                        </p>
+                    </section>
+                )}
             </main>
             <Footer/>
         </>
