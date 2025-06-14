@@ -1,0 +1,32 @@
+{
+  "destaques": [
+    {
+      "id": 0,
+      "imagens": "/festival/destaque1.jpg"
+    },
+    {
+      "id": 1,
+      "imagens": "/festival/destaque2.jpg"
+    },
+    {
+      "id": 2,
+      "imagens": "/festival/destaque3.jpg"
+    },
+    {
+      "id": 3,
+      "imagens": "/festival/destaque4.jpg"
+    },
+    {
+      "id": 4,
+      "imagens": "/festival/destaque5.jpg"
+    },
+    {
+      "id": 5,
+      "imagens": "/festival/destaque6.jpg"
+    },
+    {
+      "id": 6,
+      "imagens": "/festival/destaque7.jpg"
+    }
+  ]
+}
