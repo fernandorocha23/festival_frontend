@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import destaquesInfo from "../assets/json/destaques.json";
 
 function HomeSlideShow(){
 
@@ -16,15 +17,7 @@ function HomeSlideShow(){
     }, )
 
 
-    const imagePath = [
-        "/festival/destaque1.jpg",
-        "/festival/destaque2.jpg",
-        "/festival/destaque3.jpg",
-        "/festival/destaque4.jpg",
-        "/festival/destaque5.jpg",
-        "/festival/destaque6.jpg",
-        "/festival/destaque7.jpg"
-    ]
+    const imagePath = destaquesInfo.destaques.map(a => a.imagens);
 
     const slideHandler = (num) => {
         let newIndex = index + num;
