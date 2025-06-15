@@ -1,7 +1,3 @@
-import PasseDiario from "./PasseDiario.jsx";
-import PasseFestival from "./PasseFestival.jsx";
-import PasseVip from "./PasseVip.jsx";
-import CounterTickets from "./CounterTickets.jsx";
 import {useState} from "react";
 
 
