@@ -3,7 +3,7 @@ import {useState} from "react";
 import {useUserContext} from "../services/UserContext.jsx";
 import {toast} from "react-toastify";
 
-function CommentArtist(detalhes) {
+function CommentArtist({ detalhes }) {
     const contexto = useUserContext();
     const [likes, setLikes] = useState(detalhes.likes);
     const [liked, setLiked] = useState(false);
