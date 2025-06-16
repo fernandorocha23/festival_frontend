@@ -18,8 +18,12 @@ function ArtistDetails() {
 
     useEffect(() => {
         async function fetchComments() {
-            let comentarios = await api.get(`/artists/${dados.id}/comments`);
-            setComments(comentarios.data);
+            try {
+                const comentarios = await api.get(`/artists/${dados.id}/comments`);
+                setComments(comentarios.data);
+            } catch (error) {
+                toast("Erro ao carregar comentários.");
+            }
         }
         fetchComments();
     }, [dados.id]);
