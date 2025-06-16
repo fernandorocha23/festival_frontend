@@ -1,12 +1,19 @@
 import api from "../services/api.jsx";
-import {useState} from "react";
-import {useUserContext} from "../services/UserContext.jsx";
-import {toast} from "react-toastify";
+import { useEffect, useState } from "react";
+import { useUserContext } from "../services/UserContext.jsx";
+import { toast } from "react-toastify";
 
-function CommentArtist({ detalhes }) {
+function CommentArtist(detalhes) {
     const contexto = useUserContext();
     const [likes, setLikes] = useState(detalhes.likes);
     const [liked, setLiked] = useState(false);
+
+    useEffect(() => {
+        if (contexto.user) {
+            const hasLiked = detalhes.usersLiked.includes(contexto.user.id);
+            setLiked(hasLiked);
+        }
+    }, [contexto.user, detalhes.usersLiked]);
 
     const handleLike = async () => {
         if (!contexto.user) {
@@ -23,7 +30,6 @@ function CommentArtist({ detalhes }) {
                 setLikes(response.data.likesCount);
                 setLiked(false);
             }
-
         } catch (e) {
             toast("Ocorreu um erro ao processar o seu like.");
             console.error("Erro ao dar like:", e);
@@ -42,7 +48,7 @@ function CommentArtist({ detalhes }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default CommentArtist;
