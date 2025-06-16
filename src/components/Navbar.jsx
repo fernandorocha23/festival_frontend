@@ -10,7 +10,14 @@ function Navbar(){
                     <li><Link to="/cartaz">Cartaz</Link></li>
                     <li><Link to="/bilhetes">Bilheteira</Link></li>
                     <li><Link to="/inquerito">Inquérito</Link></li>
-                    {!contexto.user ? <li><Link to="/login">Login</Link></li> : <button onClick={contexto.logout}>Logout</button>}
+                    {!contexto.user ? (
+                        <li><Link to="/login">Login</Link></li>
+                    ) : (
+                        <>
+                            <li><Link to="/profile">Perfil</Link></li>
+                            <li><button onClick={contexto.logout}>Logout</button></li>
+                        </>
+                    )}
                 </ul>
             </div>
         </nav>
