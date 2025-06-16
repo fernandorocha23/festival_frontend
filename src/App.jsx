@@ -17,6 +17,7 @@ import {getAllArtists} from "./services/ArtistaService.jsx";
 import {useEffect, useState} from "react";
 import React from 'react';
 import {ToastContainer} from "react-toastify";
+import Profile from "./components/Profile.jsx";
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
                         <Route path="/user/comments" element={<UserComments/>}/>
                         <Route path="/result" element={<Result artists={artistas}/>}/>
                         <Route path="/login" element={<LoginPage/>}/>
+                        <Route path="/profile" element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
                     </Routes>
                 </UserProvider>
 
