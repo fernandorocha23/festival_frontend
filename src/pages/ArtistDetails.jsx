@@ -25,6 +25,7 @@ function ArtistDetails() {
                 toast("Erro ao carregar comentários.");
             }
         }
+
         fetchComments();
     }, [dados.id]);
 
@@ -32,7 +33,7 @@ function ArtistDetails() {
         setNewComment(e.target.value);
     }
 
-    const handleSubmit =  async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (!newComment.trim()) {
@@ -64,7 +65,8 @@ function ArtistDetails() {
                         <p className="artist-bio">{dados.short_bio}</p>
                         <div className={"performance-info"}>
                             <p><strong>Género:</strong>{dados.music_style}</p>
-                            <p><strong>Data da performance:</strong> {dados.performance_date} - {dados.performance_hour}</p>
+                            <p><strong>Data da performance:</strong> {dados.performance_date} - {dados.performance_hour}
+                            </p>
                             <p><strong>Palco:</strong> Principal</p>
                             <p><strong>Spotify:</strong>
                                 <Link to={dados.video_url} target="_blank"> Carregue aqui para ouvir no Spotify</Link>
@@ -72,26 +74,24 @@ function ArtistDetails() {
                         </div>
                     </div>
                 </div>
-                <form onSubmit={handleSubmit}>
-                    <section className="comment-section">
-                        <h2>Comentários sobre o artista</h2>
-                        <div className="comments-list">
-                            {comments.map((c, index) => {
-                                return (
-                                    <CommentArtist
-                                        key={index}
-                                        id={c.id}
-                                        username={c.userName}
-                                        comment_text={c.commentText}
-                                        pub_datetime={c.dateTime}
-                                        likes={c.likesCount}
-                                        usersLiked={c.usersLiked}
-                                    />
-                                );
-                            })}
-                        </div>
-                    </section>
-                </form>
+                <section className="comment-section">
+                    <h2>Comentários sobre o artista</h2>
+                    <div className="comments-list">
+                        {comments.map((c, index) => {
+                            return (
+                                <CommentArtist
+                                    key={index}
+                                    id={c.id}
+                                    username={c.userName}
+                                    comment_text={c.commentText}
+                                    pub_datetime={c.dateTime}
+                                    likes={c.likesCount}
+                                    usersLiked={c.usersLiked}
+                                />
+                            );
+                        })}
+                    </div>
+                </section>
 
                 {contexto.user ? (
                     <form onSubmit={handleSubmit}>
@@ -107,7 +107,7 @@ function ArtistDetails() {
                                     onChange={handleInput}
                                 ></textarea>
                             </div>
-                            <input type={"submit"} value="Comentar"/>
+                            <input type="submit" value="Comentar"/>
                         </section>
                     </form>
                 ) : (
