@@ -330,10 +330,12 @@ input[type="submit"]:hover {
 .comentarios {
     background-color: lightgoldenrodyellow;
     border-radius: 12px;
-    padding: 25px;
-    margin-top: 30px;
-    width: 100%;
+    padding: 40px;
+    margin: 30px auto 0;
+    width: 800px;
+    max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    gap: 20px;
 }
 
 .comentarios h3{
