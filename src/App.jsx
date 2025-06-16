@@ -17,7 +17,7 @@ import {getAllArtists} from "./services/ArtistaService.jsx";
 import {useEffect, useState} from "react";
 import React from 'react';
 import {ToastContainer} from "react-toastify";
-import Profile from "./components/Profile.jsx";
+import Profile from "./pages/Profile.jsx";
 
 function App() {
 
