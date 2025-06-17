@@ -64,8 +64,9 @@ function ArtistDetails() {
                         <h1 className={"artista-nome"}>{dados.name}</h1>
                         <p className="artist-bio">{dados.short_bio}</p>
                         <div className={"performance-info"}>
-                            <p><strong>Género:</strong>{dados.music_style}</p>
-                            <p><strong>Data da performance:</strong> {dados.performance_date} - {dados.performance_hour}
+                            <p><strong>Género:</strong> {dados.music_style}</p>
+                            <p><strong>Data da performance: </strong>
+                                 {`${new Date(dados.performance_date).toLocaleDateString("pt-PT")} - ${dados.performance_hour.slice(0, 5)}`}
                             </p>
                             <p><strong>Palco:</strong> Principal</p>
                             <p><strong>Spotify:</strong>
