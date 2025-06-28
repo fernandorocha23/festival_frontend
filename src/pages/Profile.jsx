@@ -23,6 +23,10 @@ function Profile() {
         fetchProfile();
     }, [contexto.user.id]);
 
+    const handleClick = () => {
+
+    }
+
     return (
         <>
             <Header />
@@ -36,6 +40,7 @@ function Profile() {
                     <p><strong>Banda Favorita:</strong> {profile?.favoriteBand || "—"}</p>
                     <p><strong>Email:</strong> {contexto.user.email}</p>
                 </section>
+                <button onClick={handleClick}>Editar Perfil</button>
             </main>
             <Footer />
         </>

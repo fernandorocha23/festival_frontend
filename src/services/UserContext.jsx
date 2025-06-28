@@ -1,6 +1,6 @@
 import {createContext, useContext, useEffect, useState} from "react";
 import api from "./api.jsx";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 import React from 'react';
 import {toast} from "react-toastify";
